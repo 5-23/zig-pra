@@ -16,3 +16,9 @@ const c = @cImport({
     @cInclude("stdio.h");
 });
 ```
+
+## how to use vector?
+
+```zig
+var vector = std.ArrayList(usize).init(std.heap.page_allocator); // init code 
+try vector.append(10); // push code
